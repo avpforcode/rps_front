@@ -1,0 +1,147 @@
+background-img(img)
+  url = '/static/img/' + img
+  background url(url) 100% 100% no-repeat
+  background-size contain
+
+
+
+.game
+  width 610px
+  margin 30px
+  position relative
+
+  .game-top
+    width 100%
+    overflow hidden
+
+  .timer
+    display flex
+    justify-content center
+    padding 1px 1px 1px 39px
+    float left
+    width calc(100% - 80px)
+
+  .countdown
+    font-size 30px
+
+  .game-close
+    width 40px
+    height 40px
+    float left
+    cursor pointer
+    background-img('close.png')
+    &:hover
+      background-img('close_hover.png')
+    &:active
+      background-img('close_hover.png')
+      width 37px
+      height 37px
+
+  .players
+    display grid
+    grid-gap 10px
+    grid-template-columns 300px 300px
+
+    .rock, .paper, .scissors, .empty, .pass
+      width 60px
+      height 60px
+
+    .rock
+      background-img('rock.png')
+
+    .paper
+      background-img('paper.png')
+
+    .scissors
+      background-img('scissors.png')
+
+    .pass
+      font-weight 800
+      text-align center
+      padding-top 35%
+      box-sizing border-box
+
+    .player
+      border 1px dashed black
+      padding 10px
+
+      .player-data
+        border-bottom 1px dashed
+        padding-bottom 5px
+
+      .desk
+        overflow hidden
+        height 240px
+
+        .choose
+          width 45%
+          float left
+
+          div
+            margin 10px
+            cursor pointer
+            &:hover
+              &.rock
+                background-img('rock_dark.png')
+              &.paper
+                background-img('paper_dark.png')
+              &.scissors
+                background-img('scissors_dark.png')
+
+        .result
+          display flex
+          justify-content center
+          align-items center
+          width 45%
+          float left
+          height 100%
+
+          .throw
+            padding 5px
+            box-shadow inset 0 4px 5px rgba(0,0,0,.2)
+
+        .colon
+          display flex
+          align-items center
+          width 10%
+          float left
+          height 100%
+          font-size 25px
+          font-weight 800
+
+        .face
+          width 45%
+          height 100%
+          float left
+          display flex
+          justify-content center
+          align-items center
+
+          .rival
+            width 80px
+            height 80px
+            background-img('rival.png')
+
+  .game-finished
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    display flex
+    justify-content center
+    align-items center
+    z-index 100
+    background-color #444444d4
+
+    .winner
+      display flex
+      color #ff0a09
+      font-size 24px
+      span
+        margin-right 10px
+
+    .finish-buttons
+      text-align center
+      button
+        margin 10px

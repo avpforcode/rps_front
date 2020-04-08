@@ -1,0 +1,136 @@
+background-img(img)
+  url = '/static/img/' + img
+  background url(url) 100% 100% no-repeat
+  background-size contain
+
+.main
+  position relative
+  overflow hidden
+  width 610px
+  margin 30px
+
+  .user-data
+    position relative
+    float left
+    width 300px
+    margin-right 10px
+
+    .user-data_title
+      font-size 20px
+      margin-bottom 10px
+
+    .user-game_type
+      margin-bottom 10px
+      label
+        margin 0 0 0 10px
+        font-weight 500
+
+  .user-list
+    float left
+    width 300px
+
+    .user-list_title
+      font-size 20px
+      margin-bottom 10px
+
+    ul
+      overflow scroll
+      height 160px
+      border 1px dashed black
+
+  .user-name
+    overflow hidden
+
+    .user-name_title
+      float left
+      margin-right 10px
+      overflow hidden
+
+    .user-name_block
+      float left
+      overflow hidden
+
+      input
+        float left
+        width 100px
+
+      .user-name_value
+        float left
+        max-width 150px
+        margin-right 10px
+
+      .user-name_edit
+        width 15px
+        height 15px
+        display inline-block
+        margin-bottom 3px
+        cursor pointer
+        background-img('edit.svg')
+
+      .edit-buttons
+        overflow hidden
+        float left
+        div
+          float left
+          width 20px
+          height 20px
+          margin-left 5px
+          cursor pointer
+
+        .user-name_done
+          background-img('done.png')
+
+        .user-name_cancel
+          background-img('close.png')
+
+  .user-history_button
+      position absolute
+      top 30px
+      width 30px
+      height 30px
+      right 30px
+      cursor pointer
+      background-img('history.svg')
+
+  .user-history
+    position absolute
+    top 0
+    left 0
+    width 610px
+    height 200px
+    z-index 100
+    background #fff1d0
+    padding 20px
+    overflow scroll
+
+    .history_entry
+      max-width 400px
+
+    .user-history_close
+      position absolute
+      top 10px
+      width 30px
+      height 30px
+      right 30px
+      cursor pointer
+      background-img('close.png')
+
+  .user-ready
+    text-align center
+    padding 5px 15px
+    margin 5px 5px
+    font-size 14px
+    background-color #dedcdc
+    border-radius 3px
+    box-shadow 0 1px 2px rgba(0, 0, 0, 0.3)
+    cursor pointer
+    &:hover
+      color white
+      background #009bd5
+    &.disabled
+      color white
+      box-shadow none
+      cursor default
+      &:hover
+        color white
+        background #dedcdc
